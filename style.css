@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+#title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 4rem;
+}
 form {
   border: 1px solid rebeccapurple;
   width: 80%;
@@ -47,15 +52,18 @@ form input[type="submit"] {
 }
 #output {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, auto);
   gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 .bookList {
   padding: 1rem;
   border: 1px solid #f14;
+  background-color: springgreen;
 }
 .bookList p:nth-child(2) {
   margin: 10px 0;
-  color: red;
 }
