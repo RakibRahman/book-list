@@ -5,10 +5,13 @@ const bookYear = form.bookYear;
 const submit = form.submit;
 const output = document.querySelector("#output");
 
-const books = [];
+const books = JSON.parse(localStorage.getItem("books")) || []; // get the books from localStorage
 
 const addBooks = (name, author, year) => {
   books.push({ name: name, author: author, year: year });
+
+  localStorage.setItem("books", JSON.stringify(books)); //save to localStorage
+
   return { name, author, year };
 };
 
