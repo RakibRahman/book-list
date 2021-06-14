@@ -33,6 +33,7 @@ form input[type="submit"] {
   color: white;
   padding: 0.5rem 1.5rem;
   border: transparent;
+  cursor: pointer;
 }
 #bookInfo legend {
   background-color: gray;
@@ -43,4 +44,18 @@ form input[type="submit"] {
   display: flex;
   justify-content: space-around;
   gap: 10px;
+}
+#output {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.bookList {
+  padding: 1rem;
+  border: 1px solid #f14;
+}
+.bookList p:nth-child(2) {
+  margin: 10px 0;
+  color: red;
 }
